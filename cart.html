@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#home"><img src="images/logo.png" alt="Logo"></a>
+    </div>
+    <div class="navbar-title">
+      <h1>Spice Heaven</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="cart.html">Cart (<span id="cart-counter">0</span>)</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  
+
+  <!-- Cart Section -->
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+    <div class="cart-layout">
+      <div class="cart-details">
+        <h2>Cart Items</h2>
+        <p>Total Items: <span id="total-count">0</span></p>
+        <div id="cart-items"></div>
+        <div class="checkout-summary">
+          <h2>Total Price: €<span id="total-price">0</span></h2>
+        </div>
+      </div>
+      <div class="address-section">
+        <h2>Delivery Address</h2>
+        <form id="delivery-address-form">
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required placeholder="Enter full name">
+          </div>
+          <div class="form-group">
+            <label for="address-line1">Address Line 1</label>
+            <input type="text" id="address-line1" name="address-line1" required placeholder="House/Apartment Number, Street">
+          </div>
+          <div class="form-group">
+            <label for="address-line2">Address Line 2 (Optional)</label>
+            <input type="text" id="address-line2" name="address-line2" placeholder="Landmark, Additional Info">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" required placeholder="Enter City">
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+             
+              <input type="text" id="State" name="State" required placeholder="Enter State">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pincode">Pincode</label>
+              <input type="text" id="pincode" name="pincode" required pattern="[0-9]{6}" placeholder="6-digit Pincode">
+            </div>
+            <div class="form-group">
+              <label for="phone">Contact Number</label>
+              <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit Mobile Number">
+            </div>
+          </div>
+          <button id="checkout-button" type="submit">Proceed to Checkout</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
